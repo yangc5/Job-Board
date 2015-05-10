@@ -1,0 +1,17 @@
+<%= form_for @job do |f| %>
+	<div>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label :description %>
+		<%= f.text_area :description, size: '60x6' %>
+	</div>
+	<div>
+		<%= f.label :contact %>
+		<%= f.text_field :contact %>
+	</div>
+	<div>
+	<%= f.submit %>
+	</div>
+<% end %>
