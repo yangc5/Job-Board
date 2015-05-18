@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150516184257) do
+ActiveRecord::Schema.define(version: 20150517233816) do
 
   create_table "jobs", force: :cascade do |t|
     t.text     "title"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20150516184257) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "comment"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.integer  "job_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "content"
   end
 
 end

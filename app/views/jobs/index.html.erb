@@ -1,7 +1,23 @@
 <h1>RailsBridgeCorp Open Jobs</h1>
-<% @jobs.each do |job| %>
-	<h3><%= job.title %></h3>
-	<p><%= job.description %></p>
-	<h5><%= link_to 'Show Posting', job_path(job) %></h5>
-	
-<% end %>
+
+<table id="jobs">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Contact</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+
+  <tbody>
+	<% @jobs.each do |job| %>
+	  <tr>
+		<td><%= job.title %></td>
+		<td><%= job.description %></td>
+		<td><%= job.contact %></td>
+		<td><%= link_to 'Show Posting', job_path(job) %></td>
+	  </tr>
+	<% end %>
+  </tbody>
+</table>

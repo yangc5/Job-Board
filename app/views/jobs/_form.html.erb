@@ -15,6 +15,19 @@
 		<%= f.label :comment %>
 		<%= f.text_area :comment, size: '60x6' %>
 	</div>	
+
+<%-# need to figure out how to create tag form within the job form-%>	
+<%-# tag model needs its own controller most likely-%>	
+	
+	<%= f.fields_for @job.tags.create do |addy_form| %>
+		<%= addy_form.label :tag %>
+		<%= addy_form.text_field :content%>
+
+	<% end %>
+		
+	
+
+
 	<div>
 	<%= f.submit %>
 	</div>
